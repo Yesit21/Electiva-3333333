@@ -1,0 +1,111 @@
+/* Estilos para Login (comparte estilos con Registro) */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--fondo);
+  padding: var(--espacio-lg);
+}
+
+.auth-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1000px;
+  width: 100%;
+  background-color: var(--blanco);
+  border-radius: var(--radio-md);
+  box-shadow: var(--sombra-media);
+  overflow: hidden;
+}
+
+.auth-form-section {
+  padding: var(--espacio-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-form-wrapper {
+  width: 100%;
+  max-width: 400px;
+}
+
+.logo-small {
+  text-align: center;
+  margin-bottom: var(--espacio-lg);
+}
+
+.logo-small .logo-icon {
+  font-size: 3rem;
+}
+
+.auth-form-wrapper h1 {
+  color: var(--verde-oscuro);
+  font-size: 2rem;
+  margin-bottom: var(--espacio-lg);
+  text-align: center;
+}
+
+.auth-form {
+  margin-bottom: var(--espacio-lg);
+}
+
+.btn-block {
+  width: 100%;
+  margin-top: var(--espacio-md);
+}
+
+.forgot-password {
+  margin-bottom: var(--espacio-md);
+}
+
+.auth-link {
+  text-align: center;
+  color: var(--texto-secundario);
+  font-size: 14px;
+}
+
+.auth-link a {
+  color: var(--verde-primario);
+  font-weight: 600;
+}
+
+.auth-link a:hover {
+  text-decoration: underline;
+}
+
+.auth-image-section {
+  background: linear-gradient(135deg, var(--verde-suave) 0%, var(--verde-claro) 100%);
+  padding: var(--espacio-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-placeholder {
+  width: 100%;
+  max-width: 400px;
+}
+
+.illustration {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radio-md);
+  box-shadow: var(--sombra-suave);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .auth-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .auth-image-section {
+    display: none;
+  }
+  
+  .auth-form-section {
+    padding: var(--espacio-lg);
+  }
+}

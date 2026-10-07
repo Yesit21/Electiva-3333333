@@ -1,0 +1,104 @@
+<!-- Dashboard Principal -->
+<div class="app-layout">
+  <app-sidebar></app-sidebar>
+  
+  <div class="main-content">
+    <header class="page-header">
+      <h1>Dashboard</h1>
+      <div class="header-actions">
+        <div class="search-box">
+          <input type="search" placeholder="Buscar..." />
+        </div>
+        <div class="user-avatar">👤</div>
+      </div>
+    </header>
+    
+    <div class="content-wrapper">
+      <!-- Métricas rápidas -->
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <h3>Cultivos Registrados</h3>
+          <div class="metric-value">12</div>
+        </div>
+        
+        <div class="metric-card">
+          <h3>Plantas Analizadas</h3>
+          <div class="metric-value">85</div>
+        </div>
+        
+        <div class="metric-card">
+          <h3>Enfermedades Detectadas</h3>
+          <div class="metric-value">5</div>
+        </div>
+      </div>
+      
+      <!-- Contenedor principal con gráfico y actividad -->
+      <div class="dashboard-main-grid">
+        <!-- Gráfico de enfermedades -->
+        <div class="card chart-card">
+          <h3>Gráfica de Enfermedades Detectadas</h3>
+          <div class="chart-placeholder">
+            <svg viewBox="0 0 400 200" class="chart-svg">
+              <rect x="50" y="150" width="40" height="30" fill="var(--verde-claro)"/>
+              <rect x="110" y="120" width="40" height="60" fill="var(--verde-primario)"/>
+              <rect x="170" y="100" width="40" height="80" fill="var(--alerta-amarilla)"/>
+              <rect x="230" y="130" width="40" height="50" fill="var(--verde-claro)"/>
+              <rect x="290" y="160" width="40" height="20" fill="var(--verde-primario)"/>
+              <line x1="40" y1="180" x2="350" y2="180" stroke="var(--borde)" stroke-width="2"/>
+              <line x1="40" y1="20" x2="40" y2="180" stroke="var(--borde)" stroke-width="2"/>
+            </svg>
+          </div>
+        </div>
+        
+        <!-- Actividad reciente -->
+        <div class="card activity-card">
+          <h3>Actividad Reciente</h3>
+          <div class="activity-list">
+            <div class="activity-item success">
+              <span class="activity-icon">✅</span>
+              <div class="activity-content">
+                <div class="activity-text">Análisis de tomate - Saludable</div>
+                <div class="activity-time">Hace 2 horas</div>
+              </div>
+            </div>
+            
+            <div class="activity-item warning">
+              <span class="activity-icon">⚠️</span>
+              <div class="activity-content">
+                <div class="activity-text">Alerta: Mildiú en patatas</div>
+                <div class="activity-time">Hace 5 horas</div>
+              </div>
+            </div>
+            
+            <div class="activity-item success">
+              <span class="activity-icon">🌱</span>
+              <div class="activity-content">
+                <div class="activity-text">Nuevo cultivo de maíz añadido</div>
+                <div class="activity-time">Hace 1 día</div>
+              </div>
+            </div>
+          </div>
+          
+          <button class="btn btn-secondary btn-block mt-2" routerLink="/analisis">
+            Analizar planta
+          </button>
+        </div>
+      </div>
+      
+      <!-- Alertas activas -->
+      <div class="alerts-section">
+        <h3>Alertas Activas</h3>
+        
+        <div class="alert alert-danger">
+          <span>⚠️</span>
+          <strong>Alerta Importante:</strong> Se ha detectado tizón tardío en su cultivo de patatas. Revise las recomendaciones.
+        </div>
+        
+        <div class="alert alert-warning">
+          <span>💡</span>
+          <strong>Recordatorio:</strong> Es momento de aplicar fertilizante foliar a sus cultivos de trigo.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

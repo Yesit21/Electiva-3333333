@@ -1,0 +1,64 @@
+<!-- Pantalla de Inicio de Sesión -->
+<div class="auth-container">
+  <div class="auth-layout">
+    <!-- Columna izquierda: Formulario -->
+    <div class="auth-form-section">
+      <div class="auth-form-wrapper">
+        <div class="logo-small">
+          <span class="logo-icon">🌱</span>
+        </div>
+        
+        <h1>Iniciar Sesión</h1>
+        
+        <form class="auth-form">
+          <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              placeholder="correo@ejemplo.com"
+              required
+            />
+          </div>
+          
+          <div class="form-group">
+            <label for="password">Contraseña</label>
+            <input 
+              type="password" 
+              id="password" 
+              name="password" 
+              placeholder="Ingresa tu contraseña"
+              required
+            />
+          </div>
+          
+          <button type="submit" class="btn btn-primary btn-block" routerLink="/dashboard">
+            Iniciar sesión
+          </button>
+        </form>
+        
+        <p class="auth-link forgot-password">
+          <a href="#">¿Olvidaste tu contraseña?</a>
+        </p>
+        
+        <p class="auth-link">
+          ¿No tienes una cuenta? 
+          <a routerLink="/registro">Crear cuenta</a>
+        </p>
+      </div>
+    </div>
+    
+    <!-- Columna derecha: Imagen ilustrativa -->
+    <div class="auth-image-section">
+      <div class="image-placeholder">
+        <svg viewBox="0 0 400 300" class="illustration">
+          <rect width="400" height="300" fill="var(--verde-suave)" rx="12"/>
+          <circle cx="200" cy="150" r="70" fill="var(--verde-claro)" opacity="0.3"/>
+          <circle cx="200" cy="150" r="45" fill="var(--verde-primario)" opacity="0.5"/>
+          <text x="200" y="165" text-anchor="middle" font-size="56" fill="var(--verde-oscuro)">🔐</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
