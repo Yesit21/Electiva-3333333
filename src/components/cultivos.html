@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Cultivos - AGROCAMPO</title>
+    <link rel="stylesheet" href="../styles/variables.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/layout.css">
+    <style>
+        .cultivos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: var(--espacio-lg);
+            margin-top: var(--espacio-lg);
+        }
+
+        .cultivo-card {
+            padding: var(--espacio-lg);
+            transition: var(--transicion);
+        }
+
+        .cultivo-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--sombra-media);
+        }
+
+        .cultivo-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: var(--espacio-md);
+            gap: var(--espacio-sm);
+        }
+
+        .cultivo-header h3 {
+            margin: 0;
+            color: var(--verde-oscuro);
+        }
+
+        .cultivo-info p {
+            margin-bottom: var(--espacio-xs);
+            font-size: 0.9rem;
+            color: var(--texto-secundario);
+        }
+
+        .cultivo-info strong {
+            color: var(--texto);
+        }
+    </style>
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <span class="logo-icon">🌱</span>
+                    <h2 class="logo-text">AGROCAMPO</h2>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item">
+                    <span class="nav-icon">📊</span>
+                    <span class="nav-text">Dashboard</span>
+                </a>
+                <a href="cultivos.html" class="nav-item active">
+                    <span class="nav-icon">🌾</span>
+                    <span class="nav-text">Mis cultivos</span>
+                </a>
+                <a href="analisis.html" class="nav-item">
+                    <span class="nav-icon">🔍</span>
+                    <span class="nav-text">Analizar planta</span>
+                </a>
+                <a href="biblioteca.html" class="nav-item">
+                    <span class="nav-icon">📚</span>
+                    <span class="nav-text">Biblioteca de enfermedades</span>
+                </a>
+                <a href="perfil.html" class="nav-item">
+                    <span class="nav-icon">⚙️</span>
+                    <span class="nav-text">Perfil y configuración</span>
+                </a>
+            </nav>
+        </aside>
+        
+        <div class="main-content">
+            <header class="page-header">
+                <h1>Mis cultivos</h1>
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="search" placeholder="Buscar..." />
+                    </div>
+                    <div class="user-avatar">👤</div>
+                </div>
+            </header>
+            
+            <div class="content-wrapper">
+                <button class="btn btn-primary">➕ Agregar nuevo cultivo</button>
+                
+                <div class="cultivos-grid">
+                    <div class="card cultivo-card">
+                        <div class="cultivo-header">
+                            <h3>Tomate Cherry</h3>
+                            <span class="badge badge-success">Saludable</span>
+                        </div>
+                        <div class="cultivo-info">
+                            <p><strong>Tipo:</strong> Tomate</p>
+                            <p><strong>Ubicación:</strong> Invernadero 1</p>
+                            <p><strong>Estado:</strong> Saludable</p>
+                            <p><strong>Último análisis:</strong> 2023-10-26</p>
+                        </div>
+                        <button class="btn btn-secondary btn-block">Ver detalles</button>
+                    </div>
+                    
+                    <div class="card cultivo-card">
+                        <div class="cultivo-header">
+                            <h3>Lechuga Romana</h3>
+                            <span class="badge badge-warning">Riesgo</span>
+                        </div>
+                        <div class="cultivo-info">
+                            <p><strong>Tipo:</strong> Hortalizas</p>
+                            <p><strong>Ubicación:</strong> Campo Abierto</p>
+                            <p><strong>Estado:</strong> Riesgo</p>
+                            <p><strong>Último análisis:</strong> 2023-10-30</p>
+                        </div>
+                        <button class="btn btn-secondary btn-block">Ver detalles</button>
+                    </div>
+                    
+                    <div class="card cultivo-card">
+                        <div class="cultivo-header">
+                            <h3>Pimiento Rojo</h3>
+                            <span class="badge badge-danger">Afectado</span>
+                        </div>
+                        <div class="cultivo-info">
+                            <p><strong>Tipo:</strong> Pimiento</p>
+                            <p><strong>Ubicación:</strong> Invernadero 2</p>
+                            <p><strong>Estado:</strong> Afectado</p>
+                            <p><strong>Último análisis:</strong> 2023-10-25</p>
+                        </div>
+                        <button class="btn btn-secondary btn-block">Ver detalles</button>
+                    </div>
+                    
+                    <div class="card cultivo-card">
+                        <div class="cultivo-header">
+                            <h3>Maíz Dulce</h3>
+                            <span class="badge badge-success">Saludable</span>
+                        </div>
+                        <div class="cultivo-info">
+                            <p><strong>Tipo:</strong> Cereal</p>
+                            <p><strong>Ubicación:</strong> Sector A</p>
+                            <p><strong>Estado:</strong> Saludable</p>
+                            <p><strong>Último análisis:</strong> 2023-10-22</p>
+                        </div>
+                        <button class="btn btn-secondary btn-block">Ver detalles</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

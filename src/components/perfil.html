@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - AGROCAMPO</title>
+    <link rel="stylesheet" href="../styles/variables.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/layout.css">
+    <style>
+        .profile-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: var(--espacio-lg);
+            margin-bottom: var(--espacio-xl);
+        }
+
+        .avatar-large {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-color: var(--verde-suave);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            margin: 0 auto var(--espacio-md);
+        }
+
+        .toggle {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 26px;
+        }
+
+        .toggle input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--borde);
+            transition: var(--transicion);
+            border-radius: 26px;
+        }
+
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 20px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: var(--transicion);
+            border-radius: 50%;
+        }
+
+        .toggle input:checked + .toggle-slider {
+            background-color: var(--verde-claro);
+        }
+
+        .toggle input:checked + .toggle-slider:before {
+            transform: translateX(24px);
+        }
+
+        .preference-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--espacio-md);
+            background-color: var(--fondo);
+            border-radius: var(--radio-sm);
+            margin-bottom: var(--espacio-md);
+        }
+
+        .preference-label {
+            font-weight: 600;
+            color: var(--texto);
+        }
+
+        .preference-description {
+            font-size: 0.85rem;
+            color: var(--texto-secundario);
+        }
+    </style>
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <span class="logo-icon">🌱</span>
+                    <h2 class="logo-text">AGROCAMPO</h2>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item">
+                    <span class="nav-icon">📊</span>
+                    <span class="nav-text">Dashboard</span>
+                </a>
+                <a href="cultivos.html" class="nav-item">
+                    <span class="nav-icon">🌾</span>
+                    <span class="nav-text">Mis cultivos</span>
+                </a>
+                <a href="analisis.html" class="nav-item">
+                    <span class="nav-icon">🔍</span>
+                    <span class="nav-text">Analizar planta</span>
+                </a>
+                <a href="biblioteca.html" class="nav-item">
+                    <span class="nav-icon">📚</span>
+                    <span class="nav-text">Biblioteca de enfermedades</span>
+                </a>
+                <a href="perfil.html" class="nav-item active">
+                    <span class="nav-icon">⚙️</span>
+                    <span class="nav-text">Perfil y configuración</span>
+                </a>
+            </nav>
+        </aside>
+        
+        <div class="main-content">
+            <header class="page-header">
+                <h1>Perfil y Configuración</h1>
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="search" placeholder="Buscar..." />
+                    </div>
+                    <div class="user-avatar">👤</div>
+                </div>
+            </header>
+            
+            <div class="content-wrapper">
+                <div class="profile-grid">
+                    <div class="card">
+                        <h3>Información del Usuario</h3>
+                        <div class="avatar-large">👤</div>
+                        <button class="btn btn-secondary" style="display: block; margin: 0 auto var(--espacio-lg);">Cambiar foto</button>
+                        
+                        <form>
+                            <div class="form-group">
+                                <label>Nombre completo</label>
+                                <input type="text" value="Juan Pérez" />
+                            </div>
+                            <div class="form-group">
+                                <label>Correo electrónico</label>
+                                <input type="email" value="juan.perez@ejemplo.com" />
+                            </div>
+                            <div class="form-group">
+                                <label>Teléfono</label>
+                                <input type="tel" value="+57 318472492" />
+                            </div>
+                            <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                        </form>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Configuración de la Cuenta</h3>
+                        <form>
+                            <div class="form-group">
+                                <label>Contraseña actual</label>
+                                <input type="password" placeholder="••••••••" />
+                            </div>
+                            <div class="form-group">
+                                <label>Nueva contraseña</label>
+                                <input type="password" placeholder="••••••••" />
+                            </div>
+                            <div class="form-group">
+                                <label>Confirmar nueva contraseña</label>
+                                <input type="password" placeholder="••••••••" />
+                            </div>
+                            <button type="submit" class="btn btn-primary">Cambiar contraseña</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>Preferencias y Notificaciones</h3>
+                    
+                    <div class="preference-item">
+                        <div>
+                            <div class="preference-label">Notificaciones por correo</div>
+                            <div class="preference-description">Recibe actualizaciones sobre tus cultivos</div>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" checked />
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="preference-item">
+                        <div>
+                            <div class="preference-label">Alertas de enfermedades críticas</div>
+                            <div class="preference-description">Notificaciones inmediatas de problemas graves</div>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" checked />
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="preference-item">
+                        <div>
+                            <div class="preference-label">Sugerencias de cultivo</div>
+                            <div class="preference-description">Recibe consejos personalizados</div>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" />
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - AGROCAMPO</title>
+    <link rel="stylesheet" href="../styles/variables.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <style>
+        .auth-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--fondo);
+            padding: var(--espacio-lg);
+        }
+
+        .auth-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            max-width: 1000px;
+            width: 100%;
+            background-color: var(--blanco);
+            border-radius: var(--radio-md);
+            box-shadow: var(--sombra-media);
+            overflow: hidden;
+        }
+
+        .auth-form-section {
+            padding: var(--espacio-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .auth-form-wrapper {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .logo-small {
+            text-align: center;
+            margin-bottom: var(--espacio-lg);
+        }
+
+        .logo-small .logo-icon {
+            font-size: 3rem;
+        }
+
+        .auth-form-wrapper h1 {
+            color: var(--verde-oscuro);
+            font-size: 2rem;
+            margin-bottom: var(--espacio-lg);
+            text-align: center;
+        }
+
+        .auth-form {
+            margin-bottom: var(--espacio-lg);
+        }
+
+        .auth-link {
+            text-align: center;
+            color: var(--texto-secundario);
+            font-size: 14px;
+        }
+
+        .auth-link a {
+            color: var(--verde-primario);
+            font-weight: 600;
+        }
+
+        .auth-image-section {
+            background: linear-gradient(135deg, var(--verde-suave) 0%, var(--verde-claro) 100%);
+            padding: var(--espacio-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .illustration {
+            width: 100%;
+            max-width: 400px;
+            border-radius: var(--radio-md);
+        }
+
+        @media (max-width: 768px) {
+            .auth-layout {
+                grid-template-columns: 1fr;
+            }
+            
+            .auth-image-section {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-layout">
+            <div class="auth-form-section">
+                <div class="auth-form-wrapper">
+                    <div class="logo-small">
+                        <span class="logo-icon">🌱</span>
+                    </div>
+                    
+                    <h1>Crear Cuenta</h1>
+                    
+                    <form class="auth-form" action="dashboard.html">
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo" required />
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required />
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password">Contraseña</label>
+                            <input type="password" id="password" name="password" placeholder="Crea una contraseña segura" required />
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirmar contraseña</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirma tu contraseña" required />
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">
+                            Registrarse
+                        </button>
+                    </form>
+                    
+                    <p class="auth-link">
+                        ¿Ya tienes una cuenta? 
+                        <a href="login.html">Inicia sesión</a>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="auth-image-section">
+                <svg viewBox="0 0 400 300" class="illustration">
+                    <rect width="400" height="300" fill="var(--verde-suave)" rx="12"/>
+                    <circle cx="200" cy="150" r="60" fill="var(--verde-claro)" opacity="0.3"/>
+                    <circle cx="200" cy="150" r="40" fill="var(--verde-primario)" opacity="0.5"/>
+                    <text x="200" y="160" text-anchor="middle" font-size="48" fill="var(--verde-oscuro)">🌱</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

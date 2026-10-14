@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca de Enfermedades - AGROCAMPO</title>
+    <link rel="stylesheet" href="../styles/variables.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/layout.css">
+    <style>
+        .enfermedades-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: var(--espacio-lg);
+            margin-top: var(--espacio-lg);
+        }
+
+        .enfermedad-card {
+            padding: 0;
+            overflow: hidden;
+            transition: var(--transicion);
+        }
+
+        .enfermedad-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--sombra-media);
+        }
+
+        .enfermedad-image {
+            background-color: var(--verde-suave);
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .enfermedad-content {
+            padding: var(--espacio-lg);
+        }
+
+        .enfermedad-content h3 {
+            color: var(--verde-oscuro);
+            margin-bottom: var(--espacio-md);
+        }
+
+        .enfermedad-content p {
+            font-size: 0.9rem;
+            color: var(--texto-secundario);
+            margin-bottom: var(--espacio-sm);
+        }
+    </style>
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <span class="logo-icon">🌱</span>
+                    <h2 class="logo-text">AGROCAMPO</h2>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item">
+                    <span class="nav-icon">📊</span>
+                    <span class="nav-text">Dashboard</span>
+                </a>
+                <a href="cultivos.html" class="nav-item">
+                    <span class="nav-icon">🌾</span>
+                    <span class="nav-text">Mis cultivos</span>
+                </a>
+                <a href="analisis.html" class="nav-item">
+                    <span class="nav-icon">🔍</span>
+                    <span class="nav-text">Analizar planta</span>
+                </a>
+                <a href="biblioteca.html" class="nav-item active">
+                    <span class="nav-icon">📚</span>
+                    <span class="nav-text">Biblioteca de enfermedades</span>
+                </a>
+                <a href="perfil.html" class="nav-item">
+                    <span class="nav-icon">⚙️</span>
+                    <span class="nav-text">Perfil y configuración</span>
+                </a>
+            </nav>
+        </aside>
+        
+        <div class="main-content">
+            <header class="page-header">
+                <h1>Biblioteca de enfermedades</h1>
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="search" placeholder="Buscar..." />
+                    </div>
+                    <div class="user-avatar">👤</div>
+                </div>
+            </header>
+            
+            <div class="content-wrapper">
+                <div class="form-group" style="max-width: 300px;">
+                    <label for="filter">Filtrar por cultivo:</label>
+                    <select id="filter">
+                        <option>Todos</option>
+                        <option>Tomate</option>
+                        <option>Lechuga</option>
+                        <option>Pimiento</option>
+                    </select>
+                </div>
+                
+                <div class="enfermedades-grid">
+                    <div class="card enfermedad-card">
+                        <div class="enfermedad-image">🍃</div>
+                        <div class="enfermedad-content">
+                            <h3>Tizón Tardío</h3>
+                            <p><strong>Planta:</strong> Tomate, Patata</p>
+                            <p><strong>Causa:</strong> Phytophthora infestans</p>
+                            <button class="btn btn-secondary btn-block">Ver tratamiento</button>
+                        </div>
+                    </div>
+                    
+                    <div class="card enfermedad-card">
+                        <div class="enfermedad-image">🦠</div>
+                        <div class="enfermedad-content">
+                            <h3>Mildiú Polvoriento</h3>
+                            <p><strong>Planta:</strong> Calabacín, Pepino</p>
+                            <p><strong>Causa:</strong> Erysiphales</p>
+                            <button class="btn btn-secondary btn-block">Ver tratamiento</button>
+                        </div>
+                    </div>
+                    
+                    <div class="card enfermedad-card">
+                        <div class="enfermedad-image">🍂</div>
+                        <div class="enfermedad-content">
+                            <h3>Roya</h3>
+                            <p><strong>Planta:</strong> Trigo, Maíz</p>
+                            <p><strong>Causa:</strong> Puccinia spp.</p>
+                            <button class="btn btn-secondary btn-block">Ver tratamiento</button>
+                        </div>
+                    </div>
+                    
+                    <div class="card enfermedad-card">
+                        <div class="enfermedad-image">🐛</div>
+                        <div class="enfermedad-content">
+                            <h3>Marchitez Bacteriana</h3>
+                            <p><strong>Planta:</strong> Tomate, Pimiento</p>
+                            <p><strong>Causa:</strong> Ralstonia solanacearum</p>
+                            <button class="btn btn-secondary btn-block">Ver tratamiento</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

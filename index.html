@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGROCAMPO - Plataforma Agrícola</title>
+    <link rel="stylesheet" href="src/styles/variables.css">
+    <link rel="stylesheet" href="src/styles/global.css">
+    <style>
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--verde-suave) 0%, var(--verde-claro) 100%);
+            text-align: center;
+            padding: var(--espacio-xl);
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .logo-large {
+            font-size: 6rem;
+            margin-bottom: var(--espacio-lg);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: var(--verde-oscuro);
+            margin-bottom: var(--espacio-md);
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            color: var(--texto-secundario);
+            margin-bottom: var(--espacio-xl);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: var(--espacio-lg);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--espacio-lg);
+            padding: var(--espacio-xl);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nav-card {
+            background-color: var(--blanco);
+            padding: var(--espacio-xl);
+            border-radius: var(--radio-md);
+            box-shadow: var(--sombra-suave);
+            text-align: center;
+            transition: var(--transicion);
+            text-decoration: none;
+            color: var(--texto);
+        }
+
+        .nav-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--sombra-fuerte);
+        }
+
+        .nav-icon {
+            font-size: 3rem;
+            margin-bottom: var(--espacio-md);
+        }
+
+        .nav-card h3 {
+            color: var(--verde-primario);
+            margin: 0;
+        }
+
+        .section-title {
+            text-align: center;
+            padding: var(--espacio-xl) 0;
+            color: var(--verde-oscuro);
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="hero-content">
+            <div class="logo-large">🌱</div>
+            <h1>AGROCAMPO</h1>
+            <p class="tagline">Plataforma Agrícola de Detección de Enfermedades mediante IA</p>
+            <div class="cta-buttons">
+                <a href="src/components/login.html" class="btn btn-primary">Iniciar Sesión</a>
+                <a href="src/components/registro.html" class="btn btn-secondary">Registrarse</a>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="section-title">Explorar Aplicación</h2>
+    
+    <div class="nav-grid">
+        <a href="src/components/login.html" class="nav-card">
+            <div class="nav-icon">🔐</div>
+            <h3>Inicio de Sesión</h3>
+            <p>Accede a tu cuenta</p>
+        </a>
+
+        <a href="src/components/registro.html" class="nav-card">
+            <div class="nav-icon">📝</div>
+            <h3>Registro</h3>
+            <p>Crea una cuenta nueva</p>
+        </a>
+
+        <a href="src/components/dashboard.html" class="nav-card">
+            <div class="nav-icon">📊</div>
+            <h3>Dashboard</h3>
+            <p>Panel de control</p>
+        </a>
+
+        <a href="src/components/analisis.html" class="nav-card">
+            <div class="nav-icon">🔍</div>
+            <h3>Análisis</h3>
+            <p>Analiza tus plantas</p>
+        </a>
+
+        <a href="src/components/cultivos.html" class="nav-card">
+            <div class="nav-icon">🌾</div>
+            <h3>Cultivos</h3>
+            <p>Gestiona tus cultivos</p>
+        </a>
+
+        <a href="src/components/biblioteca.html" class="nav-card">
+            <div class="nav-icon">📚</div>
+            <h3>Biblioteca</h3>
+            <p>Catálogo de enfermedades</p>
+        </a>
+
+        <a href="src/components/perfil.html" class="nav-card">
+            <div class="nav-icon">⚙️</div>
+            <h3>Perfil</h3>
+            <p>Configuración</p>
+        </a>
+    </div>
+</body>
+</html>
