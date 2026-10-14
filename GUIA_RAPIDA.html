@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Rápida - AGROCAMPO</title>
+    <link rel="stylesheet" href="src/styles/variables.css">
+    <link rel="stylesheet" href="src/styles/global.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, var(--verde-suave) 0%, var(--fondo) 100%);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: var(--espacio-xl);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: var(--espacio-xl);
+            padding: var(--espacio-xl);
+            background-color: var(--blanco);
+            border-radius: var(--radio-md);
+            box-shadow: var(--sombra-media);
+        }
+
+        .logo-icon {
+            font-size: 5rem;
+            margin-bottom: var(--espacio-md);
+        }
+
+        .card {
+            margin-bottom: var(--espacio-lg);
+        }
+
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+
+        .checklist li {
+            padding: var(--espacio-md);
+            margin-bottom: var(--espacio-sm);
+            background-color: var(--verde-suave);
+            border-left: 4px solid var(--verde-claro);
+            border-radius: var(--radio-sm);
+        }
+
+        .checklist li::before {
+            content: "✅ ";
+            margin-right: var(--espacio-xs);
+        }
+
+        .file-tree {
+            background-color: var(--fondo);
+            padding: var(--espacio-lg);
+            border-radius: var(--radio-sm);
+            font-family: monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+        }
+
+        .file-tree div {
+            padding: 2px 0;
+        }
+
+        .folder {
+            color: var(--verde-primario);
+            font-weight: bold;
+        }
+
+        .file {
+            color: var(--texto-secundario);
+        }
+
+        .commands {
+            background-color: var(--texto);
+            color: var(--texto-claro);
+            padding: var(--espacio-lg);
+            border-radius: var(--radio-sm);
+            font-family: monospace;
+            overflow-x: auto;
+        }
+
+        .commands code {
+            color: var(--verde-claro);
+        }
+
+        .btn-large {
+            display: block;
+            text-align: center;
+            padding: var(--espacio-lg);
+            font-size: 1.25rem;
+            margin-top: var(--espacio-lg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo-icon">🌱</div>
+            <h1>GUÍA RÁPIDA - AGROCAMPO</h1>
+            <p>Aplicación Web Completa de Detección de Enfermedades en Plantas</p>
+        </div>
+
+        <div class="card">
+            <h2>📋 Resumen del Proyecto</h2>
+            <ul class="checklist">
+                <li><strong>14 archivos</strong> creados (HTML, CSS, MD)</li>
+                <li><strong>7 pantallas</strong> completas y funcionales</li>
+                <li><strong>Sistema de diseño</strong> profesional con CSS puro</li>
+                <li><strong>Responsive design</strong> mobile-first</li>
+                <li><strong>Sin dependencias</strong> externas</li>
+                <li><strong>Listo para usar</strong> directamente en el navegador</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>📁 Estructura del Proyecto</h2>
+            <div class="file-tree">
+<div class="folder">📦 Agrocampo Electiva III/</div>
+<div>├── <span class="file">📄 index.html</span> <em>(Página de inicio)</em></div>
+<div>├── <span class="file">📄 README.md</span> <em>(Documentación completa)</em></div>
+<div>├── <span class="file">📄 RESUMEN.md</span> <em>(Resumen ejecutivo)</em></div>
+<div>├── <span class="file">📄 GUIA_RAPIDA.html</span> <em>(Este archivo)</em></div>
+<div>└── <span class="folder">📁 src/</span></div>
+<div>    ├── <span class="folder">📁 components/</span> <em>(7 pantallas HTML)</em></div>
+<div>    │   ├── <span class="file">login.html</span></div>
+<div>    │   ├── <span class="file">registro.html</span></div>
+<div>    │   ├── <span class="file">dashboard.html</span></div>
+<div>    │   ├── <span class="file">analisis.html</span></div>
+<div>    │   ├── <span class="file">cultivos.html</span></div>
+<div>    │   ├── <span class="file">biblioteca.html</span></div>
+<div>    │   └── <span class="file">perfil.html</span></div>
+<div>    ├── <span class="folder">📁 styles/</span> <em>(3 archivos CSS)</em></div>
+<div>    │   ├── <span class="file">variables.css</span></div>
+<div>    │   ├── <span class="file">global.css</span></div>
+<div>    │   └── <span class="file">layout.css</span></div>
+<div>    └── <span class="folder">📁 assets/</span> <em>(Imágenes y recursos)</em></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🚀 Cómo Ejecutar</h2>
+            <h3>Opción 1: Directamente en el Navegador</h3>
+            <ol>
+                <li>Abre el archivo <code>index.html</code></li>
+                <li>Navega por las diferentes secciones</li>
+                <li>¡Listo! No requiere instalación</li>
+            </ol>
+
+            <h3>Opción 2: Con Servidor Local (Recomendado)</h3>
+            <div class="commands">
+<strong># Usando Python 3</strong><br>
+<code>python -m http.server 8000</code><br><br>
+
+<strong># Usando Node.js</strong><br>
+<code>npx http-server</code><br><br>
+
+<strong># Usando PHP</strong><br>
+<code>php -S localhost:8000</code><br><br>
+
+<strong>Luego abre:</strong> http://localhost:8000
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🎨 Características del Diseño</h2>
+            <ul class="checklist">
+                <li><strong>Paleta Verde Profesional:</strong> 4 tonos de verde + alertas</li>
+                <li><strong>Variables CSS:</strong> Sistema de diseño consistente</li>
+                <li><strong>Componentes:</strong> Botones, tarjetas, badges, alertas</li>
+                <li><strong>Layout:</strong> Sidebar fija + contenido principal</li>
+                <li><strong>Responsive:</strong> Mobile, tablet y desktop</li>
+                <li><strong>Transiciones:</strong> Suaves y profesionales</li>
+                <li><strong>Accesibilidad:</strong> HTML5 semántico + ARIA</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>📱 Pantallas Disponibles</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--espacio-md);">
+                <div class="card" style="text-align: center; padding: var(--espacio-lg);">
+                    <div style="font-size: 3rem;">🏠</div>
+                    <h4>Inicio</h4>
+                    <p style="font-size: 0.9rem;">Hero + Navegación</p>
+                </div>
+                <div class="card" style="text-align: center; padding: var(--espacio-lg);">
+                    <div style="font-size: 3rem;">🔐</div>
+                    <h4>Login</h4>
+                    <p style="font-size: 0.9rem;">Inicio de sesión</p>
+                </div>
+                <div class="card" style="text-align: center; padding: var(--espacio-lg);">
+                    <div style="font-size: 3rem;">📝</div>
+                    <h4>Registro</h4>
+                    <p style="font-size: 0.9rem;">Crear cuenta</p>
+                </div>
+                <div class="card" style="text-align: center; padding: var(--espacio-lg);">
+                    <div style="font-size: 3rem;">📊</div>
+                    <h4>Dashboard</h4>
+                    <p style="font-size: 0.9rem;">Panel principal</p>
+                </div>
+                <div class="card" style="text-align: center; padding: var(--espacio-lg);">
+                    <div style="font-size: 3rem;">🔍</div>
+                    <h4>Análisis</h4>
+                    <p style="font-size: 0.9rem;">Analizar plantas</p>
+                </div>
+                <div class="card" style="text-align: center; padding: var(--espacio-lg);">
+                    <div style="font-size: 3rem;">🌾</div>
+                    <h4>Cultivos</h4>
+                    <p style="font-size: 0.9rem;">Gestionar cultivos</p>
+                </div>
+                <div class="card" style="text-align: center; padding: var(--espacio-lg);">
+                    <div style="font-size: 3rem;">📚</div>
+                    <h4>Biblioteca</h4>
+                    <p style="font-size: 0.9rem;">Enfermedades</p>
+                </div>
+                <div class="card" style="text-align: center; padding: var(--espacio-lg);">
+                    <div style="font-size: 3rem;">⚙️</div>
+                    <h4>Perfil</h4>
+                    <p style="font-size: 0.9rem;">Configuración</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>✅ Estado del Proyecto</h2>
+            <div class="alert alert-success">
+                <span>🎉</span>
+                <div>
+                    <strong>¡Proyecto Completado!</strong> Todos los archivos han sido creados, 
+                    el código está revisado y committeado en la rama <code>develop</code>.
+                </div>
+            </div>
+            <p><strong>Commit:</strong> <code>f2eff8d</code> - "feat: Implementar aplicación web completa AGROCAMPO"</p>
+            <p><strong>Fecha:</strong> 7 de Octubre, 2026</p>
+            <p><strong>Archivos:</strong> 14 archivos en total</p>
+            <p><strong>Líneas de código:</strong> ~2,158 líneas</p>
+        </div>
+
+        <a href="index.html" class="btn btn-primary btn-large">
+            🌱 Explorar AGROCAMPO
+        </a>
+
+        <div style="text-align: center; margin-top: var(--espacio-xl); color: var(--texto-secundario);">
+            <p>Desarrollado para Electiva III</p>
+            <p>🌱 <strong>AGROCAMPO</strong> - Cultivando el futuro con tecnología</p>
+        </div>
+    </div>
+</body>
+</html>
